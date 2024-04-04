@@ -10,6 +10,7 @@ A simple package designed for managing browser cookies within the Echo web frame
 
 ## Usage Example
 
+## Build a server
 ```go
 package main
 
@@ -54,22 +55,23 @@ func main() {
 	e.GET("/clear", clearHandler)
 
 	// Start server
-	go func() {
-		err := e.Start(":8080")
-		if err != nil {
-			log.Fatalf("Failed to start server: %v", err)
-		}
-	}()
-
-	// Wait for server to start
-	for {
-		_, err := http.Get("http://localhost:8080/")
-		if err == nil {
-			break
-		}
-	}
+    err := e.Start(":8080")
+    if err != nil {
+        log.Fatalf("Failed to start server: %v", err)
+    }
 }
 ```
+
+## Run the server
+```bash
+go run main.go
+```
+
+## Test the server
+```bash
+curl -i http://localhost:8080/set
+```
+
 
 ## Demo
 Navigate to the [`example`](/example) folder within this repository and run `go run main.go` in your terminal. This command will launch an Echo server demonstrating cookie setting, getting, and clearing functionalities.
