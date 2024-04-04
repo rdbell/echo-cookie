@@ -76,7 +76,7 @@ Navigate to the [`example`](/example) folder within this repository and run `go 
 
 ## Contribution
 
-Contributions are welcome! If you'd like to improve PrettyLogger or suggest new features, feel free to fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! If you'd like to improve or suggest new features, feel free to fork the repository, make your changes, and submit a pull request.
 
 # License
 
